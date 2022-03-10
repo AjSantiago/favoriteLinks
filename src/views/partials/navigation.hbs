@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="/">Favorites Links</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNav"
+			aria-controls="navbarNav"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				{{#if user}}
+					<div class="dropdown">
+						<button
+							class="btn btn-secondary dropdown-toggle"
+							type="button"
+							id="dropdownMenuButton2"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Links
+						</button>
+						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+							<li><a class="dropdown-item" href="/links">All Links</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="/links/add">Add a Link</a></li>
+						</ul>
+					</div>
+					<div>
+						<li><a class="btn btn-secondary" href="/profile">Profile</a></li>
+					</div>
+					<div>
+						<li><a class="btn btn-secondary" href="/logout">Log Out</a></li>
+					</div>
+				{{else}}
+					<div>
+						<li><a class="btn btn-secondary" href="/signin">Sign In</a></li>
+					</div>
+					<div>
+						<li><a class="btn btn-secondary" href="/signup">Sign Up</a></li>
+					</div>
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+</nav>
